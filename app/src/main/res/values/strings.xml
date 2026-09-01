@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NeonFall</string>
+    <string name="tagline">Slide. Dodge. Survive the fall.</string>
+    <string name="play">Play</string>
+    <string name="best_score">Best score</string>
+    <string name="best_stage">Best stage</string>
+    <string name="how_to_play">How to play</string>
+    <string name="how_to_play_body">Hold the left or right side of the screen to slide.\nDodge the red blocks. Catch the gold coins.\nEvery stage gets faster. There is no last stage.</string>
+    <string name="got_it">Got it</string>
+    <string name="version">v1.0.0 · no ads · no login · offline</string>
+</resources>

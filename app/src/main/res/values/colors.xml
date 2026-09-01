@@ -1,0 +1,10 @@
+<resources>
+    <color name="nf_bg">#0B1220</color>
+    <color name="nf_bg_deep">#060A14</color>
+    <color name="nf_surface">#141D30</color>
+    <color name="nf_cyan">#4DD9FF</color>
+    <color name="nf_coral">#FF4D5E</color>
+    <color name="nf_gold">#FFC93C</color>
+    <color name="nf_text">#F2F5F9</color>
+    <color name="nf_text_dim">#8A97AD</color>
+</resources>

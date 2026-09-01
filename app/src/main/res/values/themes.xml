@@ -1,0 +1,16 @@
+<resources>
+    <style name="Theme.NeonFall" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/nf_bg</item>
+        <item name="android:statusBarColor">@color/nf_bg</item>
+        <item name="android:navigationBarColor">@color/nf_bg</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:textColor">@color/nf_text</item>
+    </style>
+
+    <style name="Theme.NeonFall.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/nf_bg</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="windowSplashScreenAnimationDuration">600</item>
+        <item name="postSplashScreenTheme">@style/Theme.NeonFall</item>
+    </style>
+</resources>

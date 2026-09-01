@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NeonFall — an endless arcade dodger for Android</title>
+<meta name="description" content="Slide. Dodge. Survive the fall. A tiny offline arcade game with unlimited stages, no ads and no login.">
+<link rel="icon" href="icon.png">
+<style>
+  :root{--bg:#0B1220;--deep:#060A14;--surface:#141D30;--cyan:#4DD9FF;--coral:#FF4D5E;--gold:#FFC93C;--ink:#F2F5F9;--dim:#8A97AD}
+  *{box-sizing:border-box;margin:0}
+  html{scroll-behavior:smooth}
+  body{font:17px/1.55 "Avenir Next","Segoe UI",system-ui,sans-serif;color:var(--ink);background:linear-gradient(var(--bg),var(--deep) 60%,var(--deep));min-height:100vh}
+  a{color:var(--cyan)}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  header{padding:96px 0 48px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  header img{width:100%;max-width:340px;justify-self:center;border-radius:24px;box-shadow:0 30px 80px rgba(77,217,255,.15)}
+  h1{font-size:clamp(48px,9vw,88px);font-weight:900;letter-spacing:.02em;line-height:1}
+  .tag{color:var(--cyan);font-size:22px;font-weight:700;margin:14px 0 8px}
+  .facts{color:var(--dim);margin-bottom:28px}
+  .cta{display:inline-block;background:var(--cyan);color:var(--deep);font-weight:800;padding:16px 28px;border-radius:16px;text-decoration:none;font-size:18px}
+  .cta:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+  .sub{display:block;color:var(--dim);font-size:14px;margin-top:12px}
+  section{padding:40px 0}
+  h2{font-size:26px;font-weight:800;margin-bottom:18px}
+  .rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .rule{background:var(--surface);border-radius:20px;padding:22px}
+  .rule b{display:block;font-size:34px;font-weight:900;margin-bottom:4px}
+  .rule.c b{color:var(--coral)} .rule.g b{color:var(--gold)} .rule.n b{color:var(--cyan)}
+  table{border-collapse:collapse;width:100%;max-width:520px}
+  td{padding:10px 0;border-bottom:1px solid #1F2B44}
+  td:last-child{text-align:right;font-weight:800;color:var(--gold)}
+  .shot{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .shot img{width:100%;max-width:280px;justify-self:center;border-radius:28px;border:6px solid #1a2438}
+  footer{padding:48px 0;color:var(--dim);font-size:14px}
+  @media (max-width:720px){header,.shot{grid-template-columns:1fr}header{padding-top:56px}}
+  @media (prefers-reduced-motion:no-preference){header img{animation:float 6s ease-in-out infinite}@keyframes float{50%{transform:translateY(-10px)}}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>NeonFall</h1>
+      <p class="tag">Slide. Dodge. Survive the fall.</p>
+      <p class="facts">Unlimited stages. No ads, no account, no internet. Under 2 MB.</p>
+      <a class="cta" href="../../releases/latest">Download the APK</a>
+      <span class="sub">Android 7.0 and up. Or grab the latest build from the Actions tab.</span>
+    </div>
+    <img src="icon.png" alt="NeonFall app icon: a glowing cyan slider under falling red blocks and a gold coin">
+  </header>
+
+  <section>
+    <h2>Three things fall. You care about two of them.</h2>
+    <div class="rules">
+      <div class="rule c"><b>Red</b>Blocks. Touch one and the run ends. Squeeze past for a near-miss bonus.</div>
+      <div class="rule g"><b>Gold</b>Coins. Catch them for ten points each.</div>
+      <div class="rule n"><b>You</b>Hold the left or right side of the screen to slide. That's the whole control scheme.</div>
+    </div>
+  </section>
+
+  <section class="shot">
+    <img src="shot.png" alt="Gameplay: stage 7, score 1240, blocks falling toward the cyan player">
+    <div>
+      <h2>Stages never stop</h2>
+      <p>Each stage is a short survival timer. Clear it and the next one begins with faster, denser blocks. There is no final stage, only the one you haven't reached yet. Your best score and best stage are saved on your phone.</p>
+      <h2 style="margin-top:28px">Scoring</h2>
+      <table>
+        <tr><td>Block passes you</td><td>+1</td></tr>
+        <tr><td>Near miss</td><td>+3</td></tr>
+        <tr><td>Coin</td><td>+10</td></tr>
+        <tr><td>Stage cleared</td><td>+100</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <footer>NeonFall is open source under the MIT license. <a href="../../">View the code on GitHub</a>.</footer>
+</div>
+</body>
+</html>
