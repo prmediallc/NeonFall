@@ -19,12 +19,12 @@ val ciBuild = System.getenv("GITHUB_RUN_NUMBER")?.toIntOrNull()
 
 android {
     namespace = "com.neonfall.game"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.neonfall.game"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 36
         versionCode = ciBuild ?: 1
         versionName = "1.0.${ciBuild ?: 0}"
     }
