@@ -1,11 +1,10 @@
 import java.util.Properties
 
 plugins {
-    id("com.android.application") version "8.11.1" apply false
-    id("org.jetbrains.kotlin.android") version "2.0.20" apply false
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
 }
 
-// ---- Signing: reads from environment (GitHub Secrets) or local keystore.properties ----
 val keystoreProps = Properties().apply {
     val f = rootProject.file("keystore.properties")
     if (f.exists()) f.inputStream().use { load(it) }
@@ -14,7 +13,6 @@ fun secret(name: String): String? = System.getenv(name) ?: keystoreProps.getProp
 val ksFile = secret("KEYSTORE_FILE")?.let { file(it) } ?: rootProject.file("release.jks")
 val hasSigning = ksFile.exists() && secret("KEYSTORE_PASSWORD") != null
 
-// Play requires a unique, increasing versionCode per upload. CI supplies GITHUB_RUN_NUMBER.
 val ciBuild = System.getenv("GITHUB_RUN_NUMBER")?.toIntOrNull()
 
 android {
